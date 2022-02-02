@@ -1,0 +1,93 @@
+TypeScript (TS):
+    - TS is a superset of a JavaScript (JS)
+    - TS is an open-source OOP language
+    - TS developed by Microsoft Corporation
+    - TS is strongly typed language
+
+    TS = JS + Typed + Additional Features
+
+TS Compiler
+    - TS has its own compiler - 'tsc'
+    - tsc is writtenn in TypeScript
+    - tsc compiles .ts file into .js file
+
+TS Install
+    - Install Node.JS from nodejs.org
+    - visit typescript official website and enter the following command
+        npm install -g typescript
+
+TS vs JS
+    - TS is an object oreiented programming language
+    - JS is an object-based language (Prototype Based)
+    
+    - In TS, it is statically typed or strongly typed
+    - In JS, it is dynamically typed
+
+    - TS supports modules
+    - JS does not supports modules
+
+    - TS provides error at compile time or while development
+    - JS does not provide compile time errors 
+
+    - TS is slower than JS as it takes time to compile the code
+    - JS no need to compile the code
+
+TS Types
+    1. Static
+        - Built-In
+            string, number, boolean, null, and any
+        - User Defined
+            functions, array, class, tuple, enum, interface
+    2. Generic Types
+        - denotes in <T>
+    3. Decorators
+        - @ symbol is used to denote decorators
+
+        set type of vaiable, functions, class
+            varibale/function : built in data/Ts type
+
+
+How to run TS File?
+    use command 
+    tsc file.ts
+    node file.js
+
+TS Class 
+    - Classes can be used for reusable component creation
+    - Class has group of objects which has common properties
+
+    Class Properties
+        Fileds/Property
+        Methods
+        Constructor
+        Nested Class
+        Interface
+
+    How to crate a class in TS
+        class className{
+            filed;
+            methods;
+        }
+    
+        Run TS Class
+
+        Create an Object
+            Class cna create an object with the use of new keyword.
+
+                let classObjectName = new ClassName(parameters);
+        Access Class Properties and Methods
+            classObjectName.propertyName 
+            or
+            classObjectName.methodName();
+Modules in TS
+    Module is a concept from ES6
+    Module is a way to create a group of related varibals, functions, classes and interfaces.
+    it is executes in local scope not in global scope
+    to create a module we can use keyword 'export'
+    to use the module we can use keyword 'import'
+    the most common modules loaders are used in javascript is 'commonjs'
+    to complile module file:
+        tsc --module moudle_loader fileName.ts
+
+        
+    

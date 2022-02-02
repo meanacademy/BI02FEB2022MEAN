@@ -1,0 +1,31 @@
+Angular:
+    - Angular is a JavaScript framework that can be used to create Single Page Applications (SPA)
+    - Angular supports of several components forming a tree structure with parent and child components
+    - Angular is a development platform
+    - Angular comes with CLI
+
+Features of Angular
+    - Multiple Platforms
+    - Desktop Applications
+    - Native Applications
+    - Universal Support
+    - Strong Data Bindig
+    - Angular CLI
+    - Animation Support
+    
+Environment Setup
+    - Node and NPM
+    - Git CLI
+    - VS Code
+    - Angular CLI
+
+        npm install -g @angular/cli
+    
+    check your current install angular CLI version  
+        ng --version
+    
+First App
+    ng new applicationName
+
+Run Angular Application
+    ng s -o
