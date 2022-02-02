@@ -26,6 +26,58 @@ Environment Setup
     
 First App
     ng new applicationName
+    ex: ng new myfirstapp
 
 Run Angular Application
     ng s -o
+
+
+Building Blocks of an Angular Application
+    1. Component
+        - contains intraction and logic for end user
+
+        To create a component we can use command 
+        ng generate component componentName
+        or
+        ng g c componentName
+
+        ex. : ng generate component components/home
+
+        This command will crete three building blocks of a component
+        1. view or template file (.html)
+        2. component/class file (.ts)
+        3. Sytel file (.css or .scss)
+
+        It will also update app module which is default module of a component
+
+        2. Module (ngModule)
+            ng generate module modulename
+            or
+            ng g m modulename
+
+            ex. : ng g m modules/auth
+                  ng g m auth
+                  
+                  ng g c modules/auth/login
+
+Data Binding
+    data binding is a technique where the data stays in sync between component (.ts) and the view (template or .html)
+
+    Data Binding Types:
+    1. One Way Data Binding
+        in one way binding data flows form one direction
+        either form component to view or view to component
+
+        1.1 from component to view
+            to bind data from component to view we can use
+                interpolation - {{ templateExpression }}
+                property Binding - [binding-target] = "binding-source"
+                class binding - [class] or [ngClass]
+                style binding - [style.color] or [ngStyle]
+ 
+        1.2 from view to component
+            to bind data from view to component we can use 
+                event binding
+                (target-event) = "templateStatement"
+                
+    2. Two Way Data Binding
