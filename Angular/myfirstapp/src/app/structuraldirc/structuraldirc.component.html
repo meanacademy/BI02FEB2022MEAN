@@ -1,0 +1,28 @@
+<h3>Structural Directives</h3>
+
+<!-- <ul *ngFor="let name of names; let i = index">
+  <li>{{ i + 1 }} {{ name }}</li>
+</ul> -->
+
+<!-- <div *ngFor="let name of names; let i = index">
+  <p>{{ i + 1 }} {{ name }}</p>
+</div> -->
+
+<!-- <div *ngFor="let empolyee of employees">
+  <hr />
+  <h5>EMP ID:{{ empolyee.empid }}</h5>
+  <h5>EMP Name:{{ empolyee.empname }}</h5>
+  <h5>EMP Salary: {{ empolyee.empsalary }}</h5>
+  <hr />
+</div> -->
+
+<!-- <div [ngSwitch]="position">
+  <p *ngSwitchCase="1">I will print at position 1</p>
+  <p *ngSwitchCase="2">I will print at position 2</p>
+  <p *ngSwitchCase="3">I will print at position 3</p>
+  <p *ngSwitchDefault>I will print at Default Position</p>
+</div> -->
+
+<p *ngIf="isGraduted">
+  you are able to see this content because you are graduated from this college.
+</p>

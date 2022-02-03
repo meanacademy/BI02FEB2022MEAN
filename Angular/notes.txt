@@ -59,6 +59,43 @@ Building Blocks of an Angular Application
                   ng g m auth
                   
                   ng g c modules/auth/login
+        
+        3. Directive
+            Angular Directive helps us to manipulate DOM(Web Page).
+            You can manage the appearance, behavior, layout of a DOM.
+            You may add or remove the HTML element as per the requirements.
+
+            Types of Directives
+                1. Component Directive
+                    These are the special directive in angular which cames with view or temolate(.html)
+
+                2. Strutural Directive
+                    Strutural directive can change the DOM layout by adding or removing DOM element. 
+                    1. *ngFor
+                        Syntax:
+                        <element *ngFor="let <item> of <items>;">
+                            <html-template></html-template>
+                        </element>
+                    2. *ngIf
+                        Syntax:
+                        <element *ngIf="condition">...</element>
+
+                    3. *ngSwitch
+                        Syntax:
+
+                        <element [ngSwitch]="switch_expression">
+                            <inner-element *ngSwitchCase="match_expression-1">....</inner-element>
+                            <inner-element *ngSwitchCase="match_expression-2">....</inner-element>
+                            <inner-element *ngSwitchCase="match_expression-3">....</inner-element>
+                            <inner-element *ngSwitchDefault>....</inner-element>
+                        </element>
+
+                3. Attribute Directive
+                    these directives are used to style the appearance of an element
+                    1. ngStyle
+                    2. ngClass
+                    3. ngModel
+
 
 Data Binding
     data binding is a technique where the data stays in sync between component (.ts) and the view (template or .html)
@@ -81,3 +118,37 @@ Data Binding
                 (target-event) = "templateStatement"
                 
     2. Two Way Data Binding
+        - the two way data binding means that changes made in template are propogated to the component and the changes made in component are immediately updated to template 
+        - two way data binding [()] = property Binding [] + event binding ()
+        syntax:
+            <element [(propertyName)]="value"></element>
+        - to use two way data binding we need to add or use angulars one of the directive - 'ngModel'
+        - ngModel directive is used to get the property value
+        - ngModelChange to get an event value
+        - to use ngModel in HTML Form element we should import FormsModule in app.module.ts 
+
+Angular Pipes:
+    - Angular pipes takes data as an input and formats or transforms the data to display in template
+    - Syntax:
+        expression or data | pipeOperator[:options]
+    
+    uppercase
+    lowercase
+    currency
+    date
+    json
+
+Angular Life Cycle Hooks:
+    - Angular has 8 phases in its lifecycle
+
+        constructor
+        ngOnChanges
+        ngOnInit
+        ngDoCheck
+            ngAfterContentInit
+            ngAfterContentChecked
+            ngAfterViewInit
+            ngAfterViewChecked
+        ngOnDestroy
+
+        
