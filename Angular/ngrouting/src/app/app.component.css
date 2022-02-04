@@ -1,11 +1,13 @@
 
 nav{
-    margin-left: 50%;
+    /* margin-left: 10%; */
+    border-bottom: 1px solid black;
+    padding:5px;
 }
 a{
-    margin-right: 80px;
+    margin-right: 5px;
     text-decoration: none;
-    margin-left:10px;
-    font-size: 20px;
+    margin-left:5px;
+    font-size: 18px;
     font-weight: bold;
 }

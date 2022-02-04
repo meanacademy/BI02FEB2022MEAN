@@ -9,9 +9,11 @@ import { ActivatedRoute } from '@angular/router';
 export class UserdetailsComponent implements OnInit {
 
   userID: any;
+  routeData: any;
   constructor(private activatedRoute: ActivatedRoute) { 
     this.activatedRoute.params.subscribe(data => {
-      this.userID = data.userid;
+      // this.userID = data.userid;
+      this.routeData = data;
     })
   }
 

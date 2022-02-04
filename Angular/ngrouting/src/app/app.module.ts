@@ -9,6 +9,8 @@ import { AboutComponent } from './components/about/about.component';
 import { UserComponent } from './components/user/user.component';
 import { UserdetailsComponent } from './components/userdetails/userdetails.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
     AboutComponent,
     UserComponent,
     UserdetailsComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    ProfileComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

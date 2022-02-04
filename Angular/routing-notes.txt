@@ -37,3 +37,74 @@ Routing in Angular
 
         crete a routing module file in existing project
             ng g m app-routing --module = app
+   
+    Child Routes
+    user
+        myorders
+        profile
+            change password
+            update email
+            update mob
+        setting
+        security
+
+
+        { 
+            path: "user", 
+            component: UserComponent,
+            children:[
+                {
+                    path: 'profile',
+                    component: ProfileComponent,
+                    children: [
+                        path: 'changepassword',
+                        component: ChangePasswordComponent
+                    ]
+                },
+                {
+                    path: 'setting',
+                    component: SettingComponent
+                }
+            ]
+        }
+
+    Angular lazy Loading
+        - By default, NgModules are eagerly loaded
+        - eagerly loaded means we are calling all the modules(NgModules) as our application loades on browser
+        - If you are working on large scale applications, it will reduce the performance of an application or make a load on application
+        - For large applications we have to use Lazy Loading because we multiple or large amount of routes there
+        - 'Lazy Loading' is a design pattern that loads NgModules as per the need or requirement.
+        - also 'lazy loading' helps to decrese the load time `
+
+        Syntax:
+        ng g module moduleName --route routename --module parentmodulename
+
+        ex.:
+        ng g module employees --route employee --module app.module
+
+    Route Guards:
+         it helps to prevent users to navigate any route or path of a application withouted authentication or authorization
+
+         generate route guard with cli`
+
+         ng g guard guardName
+
+         ex.: ng g guard auth
+
+        guard interfaces
+        1. CanActivate
+            it authenticate user to visit a route or not
+        2. CanDeactivate
+            it checks if user can exit the route
+        3. CanActivateChild
+            it will check if user can visit to child or not
+        4. CanLoad
+            it will check if user can visit to lazy loaded module
+        5. Relove
+            retruns all the data (route data) before route activation
+
+
+Assignment on Routing:
+    1. create a routing for colleege with its child (upto 5 children)
+    2. create a lazy loaded module for route user
+    3. create guard for any route that you have created in assignment 1
