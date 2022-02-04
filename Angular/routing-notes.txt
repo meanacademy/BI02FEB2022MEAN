@@ -1,0 +1,39 @@
+To crate a routing application 
+    ng new appname
+
+    here it will ask you a question regarding to routing
+    enter 'y' and hit enter button 
+
+
+Routing in Angular
+    - with routing we can mange routes or paths of an application
+    - with routing we can navigate to each component with unique url or path
+    - angular comes with 'Router' module 
+    - we can find router module in '@angular/router package'
+    - make routes for component
+    - getting parameters from routes
+    - loading child routes
+    - lazy loading
+    - handiling wild cards (Dynamic navigation)
+    - handling default route
+    - handling 404 page
+
+    routes 
+        http://localhost:4200/
+
+        '/' - root path
+
+        http://localhost:4200/products
+        http://localhost:4200/products/product-a/
+
+        http://localhost:4200/products/product-a/123/
+
+
+    Angular Routing Module provides routes array
+        routes array will be useful for defining the paths for our components
+    
+    Routing Module
+        routing module is a placeholder for configuring all the routes and navigation in one module
+
+        crete a routing module file in existing project
+            ng g m app-routing --module = app
