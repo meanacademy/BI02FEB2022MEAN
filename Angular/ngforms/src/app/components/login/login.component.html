@@ -1,0 +1,46 @@
+<div class="mt-5 container">
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        name="email"
+        #email = ngModel
+        ngModel
+        required
+      />
+      <div id="emailHelp" class="form-text text-danger" *ngIf="email.touched && !email.valid">
+        invalid email or not provided email address
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        name="password"
+        #password = ngModel
+        ngModel
+        required
+      />
+    </div>
+    <div id="emailHelp" class="form-text text-danger " *ngIf="password.touched && !password.valid">
+      invalid password or not provided password
+    </div>
+    <button
+      type="submit"
+      class="btn btn-primary mt-2"
+      [disabled]="!loginForm.valid"
+    >
+      Login
+    </button>
+    <button class="btn btn-danger ms-2" (click)="reset(loginForm)">Reset</button>
+    <button class="btn btn-success ms-2" (click)="setValues(loginForm)">
+        Set values
+    </button>
+  </form>
+</div>

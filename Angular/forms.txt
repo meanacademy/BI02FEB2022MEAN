@@ -1,0 +1,39 @@
+Forms
+    Forms are used to get some input from end user
+    they be 
+    register form
+    login form
+    contact
+    forget password
+    checkout form
+
+    Forms are used to gathr some information and data from the end user
+    It helps in intraction with the users
+
+Types of Angular Forms
+    1. Template Driven Form (TDF)
+    2. Reactive Form (Dynamic Form)
+
+With angular framework we can do with forms as
+    two way data binding
+    change tracking 
+    validations
+    error handling
+
+TDF 
+    they are easy to use and implement
+    they are straightforward and simple
+    the validations can be done or defined in template file (html)
+    to use TDF we need to import 'FormsModule' in app.module.ts
+
+Reactive Form
+    They are dynamic forms means all the intractions, validtions are handled in component file (.ts)
+    to reactive form we are using angular built in directives formGroup and formControl
+    usally these forms are used for complex inputs or dynamic inputs
+    we have import 'ReactiveFormModule' in app.module.ts
+
+Steps to implement TDF
+    Step 1: import FormsModule in app.module.ts
+    Step 2: name form with # (template reference varibal) ngForm - angular directive
+    Step 3: add ngModel in inputs (input text, email, password, textarea, checkbox, select option,...)
+     

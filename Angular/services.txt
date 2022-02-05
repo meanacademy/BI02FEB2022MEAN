@@ -1,0 +1,43 @@
+DI - Dependency Injection
+    - it is a desing pattern in application development
+    - with the help di we are able supply data to the component
+    - to get the data from di the component has to be Injectable service classe
+    - angular provides its ows DI framework
+    - with this we can increase the efficiency of an application
+
+Servies
+    - services allows us to create reusable common shared functioinality or data
+    - services can be a singleton
+    - services are injected into application using DI
+    - commonly services used for HTTP requests to our endpoints (API Call)
+
+Generate service in Angular CLI
+
+    ng generate service serviceName
+
+    ex. ng g service student
+    
+    For Local Services
+    Step 1. Create Service File with CLI command
+    Step 2. Create Methods or Functions that returns some data (shared data)
+    Step 3. Import Service in component (where we want to get data from service)
+    
+HttpClient
+    - HTTP requests are GET, POST, PUT, DELETE
+    - HttpClient is used to perform HTTP requests and responses
+    - HttpClient service is abaible in the @angular/common/http package
+    - HttpClientModule needs to import in app module
+
+    Steps to create http service
+    Step 1: create a service fie with cli command
+    step 2: import 'HttpClientModule in app.module.ts
+    Step 3: import 'HttpClient' in service file or component for HTTP requests
+    Step 4: Inject HttpClient in the constructor 
+    Step 5: implement the HTTP Request call (GET, POST, PUT, DELETE)
+
+    GET Method
+        - it is used to retriving data from server/ database
+        - get('api-endpoints')
+        - api-endpoints - 'url' - ex. http://exampl.com/api/getdata
+
+    

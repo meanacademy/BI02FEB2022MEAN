@@ -1,0 +1,9 @@
+Bootstrap
+    - It is UI design framework
+    - We can use bootstrap in angular application design
+
+Install Bootstrap in Angular application
+    - npm i bootstrap
+    - update angular.json file
+        add "node_modules/bootstrap/dist/css/bootstrap.min.css" string in styles array
+    
