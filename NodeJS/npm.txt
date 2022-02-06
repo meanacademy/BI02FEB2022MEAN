@@ -1,0 +1,25 @@
+NPM - Node Package Manager
+    - default package manager for node.js
+    - npm is written in javascript
+    - manages all the packages and modules for nodejs and consits of command line client npm
+    - it can also use to update or uninstall packages
+    - it is an open source
+
+    Syntax:
+        npm install package_name
+        or
+        npm i package_name
+
+
+        npm uninstall package_name
+
+        to create a node app 
+            npm init
+
+        Entry Point:
+            index.js
+                if you want to create a static webpage you can create a index.js entry point file
+            app.js
+                if you want to create nodejs application (web) then use app.js entry point file
+            server.js
+                if you want to create an APIs for any web or mobile applications then use server.js entry point file

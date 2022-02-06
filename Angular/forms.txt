@@ -36,4 +36,55 @@ Steps to implement TDF
     Step 1: import FormsModule in app.module.ts
     Step 2: name form with # (template reference varibal) ngForm - angular directive
     Step 3: add ngModel in inputs (input text, email, password, textarea, checkbox, select option,...)
-     
+    
+Reactive Form
+    - for complex forms we are using reactive form in angular application
+    - all the elements, validations and intractions can be handled in component file (.ts)
+    - angulars built in 'formGroup' and 'formControl' to handle reactive form
+    - two way data binding can be done smoothly in reactive form
+    - to use reactive form, we need to import 'ReactiveFormsModule' in app.module.ts
+
+States of reactive form
+    - ng-touched
+    - ng-dirty
+    - ng-pristine
+    - ng-valid
+    - ng-invalid
+
+Main things that we have to keep in mind about reactive form
+    1. FormControl
+    2. FormGroup
+    3. FormBuilder
+
+Steps to start with angular reactive form
+
+    Step 1: Import 'ReactiveFormsModule' in app.module.ts (or any other module file where we want to use reactive form)
+    Step 2: Create the form (.html)
+        FormGroup
+            it is directive from angular for assinging form name
+        formControlName
+            it can be add as an attribute for each field/input
+
+    
+FormBuilder
+    - it is an abstraction layer which makes easy to design a reactive form
+    - FormBuilder is used to make complex form structure
+    - adding or removing form elements
+
+    FormBuilder having 3 element
+        1. FormGroup
+        2. FormControl
+        3. FormArray
+
+Set Values in reactive form
+    1. set values to entire form using FormControl('value')
+    2. using setValue(valueObject) - we have to set all the formcontrols to set the values
+    3. using patchValue(valueObject) - we can set any form control values
+
+Validations in Reactive Form
+    - we have built in form validators in reactive form
+    - we have to write the validations in ts file i.e component file
+
+Assignment - 
+1. Create a forget password form using TDF (With Validations)
+2. Create a student registration form using Reactive Form (With validations)

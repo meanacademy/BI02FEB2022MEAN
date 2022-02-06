@@ -1,0 +1,20 @@
+{
+  "name": "mypackage",
+  "version": "1.0.0",
+  "description": "this is a simple package ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "demo",
+    "sample",
+    "nodejs",
+    "npm"
+  ],
+  "author": "Mahesh Bodhgire",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}

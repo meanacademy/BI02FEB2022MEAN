@@ -1,1 +1,62 @@
-<p>register works!</p>
+<div class="container mt-5">
+  <form [formGroup]="registerForm">
+    <div class="mb-3">
+      <label class="form-label">Name:</label>
+      <input
+        type="text"
+        class="form-control"
+        name="name"
+        formControlName="name"
+      />
+      <!-- <div class="text-danger" *ngIf="registerForm.get('name').errors && registerForm.get('name').errors['required']">
+        Invalid name or empty field
+      </div> -->
+      <div
+        class="text-danger"
+        *ngIf="f['name'].errors && f['name'].errors['required']"
+      >
+        Invalid name or empty field
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Email:</label>
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        formControlName="email"
+      />
+      <div
+        class="text-danger"
+        *ngIf="f['email'].errors && f['email'].errors['required']"
+      >
+        Invalid email or empty field
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Password:</label>
+      <input
+        type="password"
+        class="form-control"
+        name="password"
+        formControlName="password"
+      />
+      <div
+        class="text-danger"
+        *ngIf="f['password'].errors && f['password'].errors['required']"
+      >
+        Invalid password or empty field
+      </div>
+    </div>
+    <button
+      type="submit"
+      class="btn btn-primary mt-2"
+      (click)="register()"
+      [disabled]="!registerForm.valid"
+    >
+      Register
+    </button>
+
+    <button class="btn btn-danger ms-2" (click)="resetForm()">Reset</button>
+  </form>
+</div>

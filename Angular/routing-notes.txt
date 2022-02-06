@@ -108,3 +108,4 @@ Assignment on Routing:
     1. create a routing for colleege with its child (upto 5 children)
     2. create a lazy loaded module for route user
     3. create guard for any route that you have created in assignment 1
+

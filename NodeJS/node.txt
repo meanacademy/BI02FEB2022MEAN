@@ -1,0 +1,32 @@
+Introduction:
+    - Nodejs is not a framework nor programming language
+    - Nodejs is runtime environment for Javascript
+    - Nodejs is built with Chrome's V8 JavaScript Engine
+    - Nodejs is an output of a c++ program which means the nodejs written in C++
+    - C++ program also consists of V8 javascript engine so we are able to run js file out of the web browsers
+    - Mostly Nodejs is used to create an APIs for web and mobile applications
+
+Why?
+    It is ideal for highly scalable applications
+    It is aslo ideal for data intensive and real time applications
+    It is superfast as compared to other programming language
+    It creates cleaner code for backend
+    we have large amount of open source lib
+
+JavaScript Engine?
+    - it is like a compiler who gets js file and converts into machine code
+
+Node Modules
+    Node Module Wrapper Function
+    (function(exports, require, module, __filename, __dirname) {})
+
+    Built in modules
+        path
+        url
+        fs
+        http
+    Third Party Modules
+        third party modules are the functioinality that can be implemented into our application
+        they can be install with npm
+        npm i package_name
+    
