@@ -1,0 +1,51 @@
+MongoDB Cursor
+    - it is a part of mongodb collection which returns upon the find method execution
+    - when we call a find method, all the documents are returned and saved in a virtual cursor.
+
+
+    There are cursor methods that can be applied to find method
+    1. cursor.count()
+        returns the no of documents in a collection
+        db.students.find().count()
+    
+    2. cursor.forEach(function)
+        iterates the curson to apply JS function
+        db.students.find().forEach((dacument)=>{
+            print('Student Name:' + dacument.first_name)
+        })
+    
+    3. cursor.map(function)
+        it works similar to forEach but it retruns with the modified value
+        db.students.find().map((document)=>{
+            return document.birth_year + 1;
+        })
+    4. cursor.toArray()
+        it retruns an array of documents
+
+        db.students.find().toArray()
+    5. cursor.limit(n)
+        it returns the max number of documents to be retrived from the collection
+         n - no of documents, and it is a positive number
+
+         db.students.find().limit(5)
+         db.students.find({"birth_year": 1995}).limit(2)
+
+         db.students.find({"birth_year": 1995}).count()
+    6. cursor.skip(n)
+        it skips the no of documents
+        n - no of documents to be skips. it is a positive number
+
+        db.students.find().skip(995)
+
+    7. cursor.sort({fieldName: order})
+        it sorts the documents with the field value.
+        order - for asc = 1
+                for dec = -1
+        
+        db.students.find().sort({"birth_year": -1}).limit(5).pretty()
+
+
+Exercise on Students
+1. How many students whos gender is Male
+    db.students.find({"gender":"Female"}).count()
+

@@ -1,0 +1,133 @@
+To list all databases
+    - show dbs;
+
+To get current database name or selected database name
+    - db
+
+To create a new db (MongoDB never creates empty databases)
+or
+To Switch a database
+    - use database_name
+
+Note - to create a new database there should be at least one collection
+
+To collection in a selected db
+    - db.createCollection("collectionName")
+
+Note - Mongodb Methods or commands or queries always returns an object
+     - Mongodb Collection Name should be in pural form add s or es to collection name
+        ex. student - 'students', employee - 'employees'
+
+To get all collections 
+    - show collections
+
+To add document in a collection
+    To add or insert a document in a colletion we are having two methods
+        1. insertOne()
+            - this method is used to 'insert single document' in a colletion
+                document = {
+                    key: value
+                }
+                
+                db.collectionName.insertOne(document)
+            - Ex. 
+
+                db.students.insertOne(
+                    {
+                        "name": "John",
+                        "address": "Mumbai",
+                        "contact": 99845545454,
+                        "email": "john@example.com"
+                    })
+        2. insertMany()
+            - this method is used to 'insert multiple documents' at same time 
+
+                document = [
+                    { key: value }, 
+                    { key: value }
+                ]
+
+                db.collectionName.insertMany(document)
+
+                Ex. 
+                db.students.insertMany(
+                    [
+                        {"name": "Jane", "address": "Pune"},
+                        {"name": "Abc", "address": "Delhi", "contact": 742157542},
+                        {"name": "Xyz", "email": "xyz@example.com"}
+                    ]
+                )
+
+To Find or serach documents from collection
+    to find the documents from the collection we have two methods 
+        1. findOne()
+            it will return a first document of a collection
+            it returns a single object (document)
+
+                db.collectionName.findOne()
+
+        2. find()
+            it will retruns all the documents from the collection
+            it will returns array of documents 
+
+                db.collectionName.find()
+
+    To find filtered documents
+
+        filter = {key: value}
+
+            1. db.collectionName.findOne(filter)
+
+                db.students.findOne({_id: ObjectId("61ffe0d36e8662d1df4f5172")})
+
+            2. db.collectionName.find(filter)
+
+                db.students.find({"address" : "Pune"})
+
+To Update a document
+    to update the document thre are two methods
+    1. updateOne()
+        db.collectionName.updateOne(filter, updateData, option)
+
+        db.students.updateOne(
+            {"_id" : ObjectId("61ffe4396e8662d1df4f5173")},
+            {
+                $set: {
+                    "address" : "Mumbai",
+                    "contact" : 6587842454
+                }
+            }
+        )
+
+    2. updateMany()
+
+        db.collectionName.updateMany(filter, updateData, option)
+
+        db.students.updateMany(
+            {"address" : "Mumbai"},
+            {
+                $set: {
+                    "address" : "Pune"
+                }
+            }
+            )
+
+        db.students.updateMany(
+            {},
+            {
+                $set: {
+                    "address": "Pune"
+                }
+            }
+        )
+
+To delete a document from the collection
+    1. deleteOne()
+        db.collectionname.deleteOne(filter)
+
+        db.students.deleteOne({"address" : "Pune"})
+
+    2. deleteMany()
+        db.collectionname.deleteMany(filter)
+
+        db.students.deleteMany({})

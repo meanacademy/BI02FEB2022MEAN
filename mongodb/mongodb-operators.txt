@@ -1,0 +1,139 @@
+MongoDB Projection
+    projection is an object where we can pass the field name with its presence
+    if you want to show the key in document retriving, use value 1
+    if you dont want to show the key in document retriving, use value 0
+
+    find(filter, projection)
+
+        filter = {fieldName: value}
+        projection = {fieldName: 1} or {fieldName: 0}
+
+        ex. db.students.find({}, {id: 1, first_name: 1, email: 1, _id:0})
+    
+query and projection operators
+1. comparison query operators
+    1.1 $eq
+        matches values that are equal to a specified value
+
+        db.students.find({"birth_year": 1995})
+        db.students.find(
+            {
+                "birth_year": {$eq: 1995}
+            }).count()
+    1.2 $gt
+        matches values that are greater than a specified value
+
+        db.students.find(
+            {
+                "birth_year": { $gt : 1995}
+            }
+            ).count()
+    
+    1.3 $lt
+        matches values that are less than a specified value
+
+        db.students.find(
+            {
+                "birth_year": { $lt : 1995}
+            }
+            ).count()
+    
+    1.4 $gte
+        matches values that are greater than or equal to a specified value 
+
+        db.students.find(
+            {
+                "birth_year": { $gte : 1995}
+            }
+            ).count()
+    
+    1.5 $lte
+        matches values that are les than or equal to a specified value
+
+        db.students.find(
+            {
+                "birth_year": { $lte : 1995}
+            }
+            ).count()
+
+    1.6 $ne
+        matches values that are not equal to a specified value
+        db.students.find(
+            {
+                "birth_year": {$ne: 1995}
+            }).count()
+
+2. Logical query Operators
+    2.1 $and
+        Syntax: {
+            $and: [{}, {}]
+        }
+        $and joins query clauses with a logical AND and returns all the documents that matches the condition of both clauses
+
+        db.students.find(
+            {
+                $and: [
+                    {"birth_year": 1995 },
+                    {"gender": "Male"}
+                ]
+            }
+        ).count()
+    
+    2.2 $or
+        it joins query clauses with a logical OR and returns all the documents that matches the condition of either clause
+
+        db.students.find(
+            {
+                $or: [
+                    {"birth_year": 1995 },
+                    {"gender": "Male"}
+                ]
+            }
+        ).count()
+    
+    2.3 $nor
+        it joins query clauses with a logical NOR and returns all the documents that fail to match the both conditions
+
+        db.students.find(
+            {
+                $nor: [
+                    {"birth_year": 1995 },
+                    {"gender": "Male"}
+                ]
+            }
+        ).count()
+
+Update Operators
+    1. $inc
+        increment the value of the field by a s specified amount
+
+        db.students.updateMany({}, {
+            $inc: {birth_year: 1}
+        })
+
+        db.students.updateMany({}, {
+            $inc: {birth_year: -1}
+        })
+    
+    2. $mul
+        multiply the values of the field by the specified amount
+
+        syntax: db.collectionName.updateMany({}, {$mul: {fieldName: mulNo}})
+    
+    3. $min
+        only updates the field if the specified value is less than the existing value
+        Syntax: db.collectionName.updateMany({}, {$min: {fieldName: value}})
+
+    4. $max
+        only updates the field if the specified value is greater than the existing value
+        syntax: db.collectionName.updateMany({}, {$max: {fieldName: value}})
+
+            db.students.updateOne(
+                {
+                    "_id" : ObjectId("5ee1ba6dfa12962d908dd808")
+                }, 
+                {
+                    $max: {
+                        birth_year: 2000
+                        }
+                })

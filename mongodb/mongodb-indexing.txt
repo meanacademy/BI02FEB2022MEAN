@@ -1,0 +1,15 @@
+MongoDB Indexing
+    Indexing supports the efficient execution of queries in MongoDB.
+    without indexes, mongodb must perform a collection scan
+        scan each document in a collection
+    it is a special data structure that stores the small portion of the collections data set
+    the index stores the value of a specific field or set of field, ordered by the value
+    in mongodb collection, default indexing applied to _id field.
+    
+    get all the indexes
+        db.collection.getIndexes()
+
+    create the index
+        db.collection.createIndex({key:order})
+
+        db.students.createIndex({email: 1})

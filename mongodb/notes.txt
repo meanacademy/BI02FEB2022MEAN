@@ -1,0 +1,96 @@
+What is NoSQL?
+    - it stands for not only sql or non sql
+    - it dont have any structure for a database
+    - they are not a tabular format
+
+Types of NoSQL
+    1. Document
+        MongoDB, CouchDB, CosmosDB
+    2. Key-Value
+        Redis, DynamoDB
+    3. Wide-Column
+        Cassandra, HBase
+    4. Graph
+        Neo4j
+
+SQL vs NoSQL
+    - SQL dbs are relational dbs, NoSQL dbs are not relational dbs
+    - SQL dbs are structured, NoSQL dbs are not structured
+    - SQL dbs are having predefined schema for database, NoSQL dbs are schemaless, they are having dynamic schema
+    - SQL dbs are vertically scalable, NoSQL dbs are horizontally scalable
+
+Vertically Scalable
+    scale by adding more 'power' (CPU, RAM, HDD) to an existing machine
+
+Horizontally Scalable
+    scale by adding more 'machine' into our pool of resources
+
+
+What is MongoDB?
+    - It is a NoSQL database which is written in C++.
+    - It is Document oreiented database
+    - built for modern web and mobile application development
+    - it stores data in JSON like 'documents'
+
+Setup
+    go to website - https://www.mongodb.com/try/download/community
+    and download setup or zip file to your system
+    procced with installtion process
+    check if there is a service available for mongodb after installtion
+    
+    environment setup
+        copy the mongodb bin path and set in environment varibals path
+
+    
+if you are a user of windows 7 - download mongodb v3.2 or less
+
+MongoDB apps 
+    1. mongod - mongodb server 
+    2. mongo - mongodb client 
+
+MongoDB Shell
+    it is based on JS
+    it uses MozJS-60 JS engine for the mongodb
+    to check JS engine used in mongodb shell:  
+        interpreterVersion();
+
+Terminology: 
+    SQL(MySQL)          MongoDB
+    database            database
+    table               collection
+    record/row          document
+    Col or Field        field
+    indexing            indexing
+    aggregation         aggregation
+
+Data Types: 
+    MongoDB stores the data in BSON type 
+        BSON - Binary of JSON
+
+    BSON Types or Data Types: 
+        Types               Syntax
+        string              ""
+        int                 NumberInt()/NumberLong()
+        Array               []
+        boolean             true or false
+        double              0.0
+        object              {}
+        date                ISODate()
+        ObjectId            ObjectId()
+
+_id:
+    Mandatory Field from MongoDB document
+    we can assign _id manually
+    it will create automatically if you are not providing or assinging any value 
+    if it is auto generated with mongodb, it has a value in ObjectId type
+
+ObjectId:
+    it is a default value of _id 
+    ObjectId is a 12 byte in size
+    it is a auto generated value
+
+    the first 4 bytes are - timestamp
+    the next 3 bytes are - machine identifier
+    the next 2 bytes are - process id
+    the next 3 bytes are - incremental counter
+
