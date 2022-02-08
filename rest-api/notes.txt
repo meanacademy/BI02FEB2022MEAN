@@ -1,0 +1,21 @@
+REST or REST API
+    - REpresentational State Transfer 
+    - Application Programming Interface
+    - API is a kind of block of code or software or an application which allows two applications to communicate each other over the internet
+    - RESTful API is an architectural style for an API that uses HTTP request methods: GET, POST, PUT, DELETE
+    - with these HTTP requests we can access or send data from or to server
+    
+
+Steps to Create an API for ToDo App
+Step 1: Create Blank Node app - npm init
+Step 2: Install all third party packages or modules that are required
+        npm i express mongoose body-parser
+Step 3: imports all the modules in server.js file
+Step 4: Follow MVC architecture for folder structure
+Step 5: connect to db - mongodb
+Step 5: start the server
+Step 6: create model or schema for a collection
+Step 7: write business logic in controller file
+Step 8: Create routes for API in routes.js
+Step 9: import route file in server.js and create an object for the same
+Step 10: repeat the same for other routes
