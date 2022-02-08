@@ -1,0 +1,107 @@
+Express.JS
+    - Free and open source web framework for Node.js
+    - We can build single page, multiple pages or hybrid web applications with express.js
+    - It is lightweight and organised MVC architecture
+    - With express.js we can create web api
+    - it has good performance
+    - it is faster and server side development
+    - it has various middlewares where we can communicte with database and other third party services or api's 
+    - it also provides routing
+    - it also provides template engine that allow the developers to build dynamic content on the web page
+
+Install
+    npm install express
+
+MVC architecture
+    Model
+        It is a structure of an application
+    View
+        Display or visual presentation to end user 
+    Controller
+        Business Logic
+
+Express Routing
+    HTTP Request methods
+        GET, POST, PUT, DELETE ...
+    client will request from http request method to access route
+    each route has its own handler function
+
+    Syntax:
+    app.METHOD(PATH, HANDLER)
+
+    app - instance of  a express application
+    METHOD - HTTP request method
+    PATH - path on the server
+    HANDLER - function (middleware)
+
+    Response Methods
+        res.send()
+        res.json()
+        res.render()
+        res.sendStatus()
+        res.download()
+        res.sendFile()
+
+    Route Parameter
+        route parameters are the named url segments that are used to capture the values specifiedat their positoin in the url
+        you can populate the parameters in 'req.params' object
+
+        Route Path: /users/:userid
+        Requested URL: http://localhost:3000/users/123
+        req.params = {"userid": 123}
+
+        Route Path: /users/:userid/books/:bookid
+        Requested URL: http://localhost:3000/users/123/books/456
+        req.params = { "userid": 123, 'bookid': 456}
+
+    Express Router
+        the express.Router class to crete a modular route handler
+        a router instance is a complete middleware and routing system
+
+        To create a router file
+            let express = require('express');
+            let router = express.Router();
+
+            //define routes
+            router.get('/', (req, res) => {
+                res.send('Homepage);
+            })
+
+            //export router
+            module.exports = router;
+
+Static Files:
+
+    To serve static files such as images, css and js files, we are using express.static built-in middleware function in expressjs
+
+
+    Syntax:
+    express.static(ROOT, [OPTIONS])
+
+    root - root directory from which to serve the static assets/content
+
+    ex.: 
+        app.use(express.static('public'))
+
+        or 
+
+        app.use('/static', express.static(path.join(__dirname, 'public')))
+
+Express Middleware:
+    - middleware functions are the functions that have access to the 'request' and 'response' object and also 'next' middleware function in the applications req-res Cycle
+
+    middleware performs like execution of block of code
+    they can modify the req and res object
+    they can end req and res any time
+    they can call next middleware function in the Stack
+
+    Types of Middleware:
+    1. Application Level Middleware
+    2. Router Level middleware
+    3. Error handling middleware
+    4. Built- in middleware
+    5. Third-party middleware
+
+    app.get('/path', (req, res)=>{
+        
+    })
